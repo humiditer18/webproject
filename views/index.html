@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nadine's Site</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/lockr.min.js"></script>
+    <script src="javascripts/cookies.js"></script>
+    <script src="javascripts/script.js"></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a class="signin" href="#0">Connexion</a></li>
+            <li><a class="signup" href="#0">Inscription</a></li>
+        </ul>
+    </nav>
+    
+    <div class="user-modal">
+        <div class="user-modal-container">
+            <ul class="switcher">
+                <li><a href="#0">Connexion</a></li>
+                <li><a href="#0">Inscription</a></li>
+            </ul>
+            <div id="login">
+                <form class="form" id="signin_form">
+                    <div class="alert alert-danger" id="signin_error" role="alert">
+                        Nom d'utilisateur ou mot de passe incorrect.
+                    </div>
+                    <p class="fieldset">
+                        <label class="image-replace username" for="signin-username">Nom d'utilisateur</label>
+                        <input class="full-width has-padding has-border" id="signin-username" type="text" placeholder="Nom d'utilisateur">
+                        <span class="error-message">Email </span>
+                    </p>
+                    
+                    <p class="fieldset">
+                        <label class="image-replace password" for="signin-password">Mot de passe</label>
+                        <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Mot de passe">
+                        <a href="#0" class="hide-password">Afficher</a>
+                        <span class="error-message">Mauvais mot de passe!</span>
+                    </p>
+                    
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="Connexion">
+                    </p>
+                </form>
+            </div>
+            
+            <div id="signup">
+                <form class="form" id="signup_form">
+                    <div class="alert alert-danger" id="signup_error" role="alert">
+                        Nom d'utilisateur déjà enregistré, veuillez choisir un autre.
+                    </div>
+                    <p class="fieldset">
+                        <label class="image-replace username" for="signup-username">Nom d'utilisateur</label>
+                        <input class="full-width has-padding has-border form-control" id="signup-username" type="text" placeholder="Nom d'utilisateur" required="true" oninvalid="this.setCustomValidity('Le nom d\'utilisateur doit être alphanumérique')" oninput="this.setCustomValidity('')">
+                    </p>
+                    
+                    <p class="fieldset">
+                        <label class="image-replace password" for="signup-password">Mot de passe</label>
+                        <input class="full-width has-padding has-border form-control" id="signup-password" type="password"  placeholder="Mot de passe" required="true" oninvalid="this.setCustomValidity('Le mot de passe doit être au moins 6 caractères')" oninput="this.setCustomValidity('')">
+                        <a href="#0" class="hide-password">Afficher</a>
+                    </p>
+                    
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Inscription">
+                    </p>
+                </form>
+            </div>
+            
+            <a href="#0" class="close-form">Fermer</a>
+        </div>
+    </div>
+</body>
+</html>
